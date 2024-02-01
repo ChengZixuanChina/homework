@@ -18,7 +18,7 @@
 95 30 43 37 19
 70 12 66 16 106
 */
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -26,33 +26,36 @@ int main()
 {
 	int n, a[114][114];
 	cin >> n;
-	
-	//输入 
-	for(int i = 1; i <= n; i ++)
-		for(int j = 1; j <= n; j ++)
+
+	// 输入
+	for (int i = 1; i <= n; i++)
+		for (int j = 1; j <= n; j++)
 			cin >> a[i][j];
-			
-	//对角线加10 
-	for(int i = 1; i <= n; i ++)
-		for(int j = 1; j <= n; j ++)
+
+	// 对角线加10
+	for (int i = 1; i <= n; i++)
+		for (int j = 1; j <= n; j++)
 		{
-			//是否为对角线 
-			if(i == j) a[i][j] += 10;
-			if(i + j == n + 1) a[i][j] += 10;
-			//是否为中心点 
-			if((i + j == n + 1) && (i == j)) a[i][j] -= 10;
+			// 是否为对角线
+			if (i == j)
+				a[i][j] += 10;
+			if (i + j == n + 1)
+				a[i][j] += 10;
+			// 是否为中心点
+			if ((i + j == n + 1) && (i == j))
+				a[i][j] -= 10;
 		}
-		
-	cout << endl; //调试时看的方便
-	
-	//输出 
-	for(int i = 1; i <= n; i ++)
+
+	cout << endl; // 调试时看的方便
+
+	// 输出
+	for (int i = 1; i <= n; i++)
 	{
-		for(int j = 1; j <= n; j ++)
+		for (int j = 1; j <= n; j++)
 			cout << a[i][j] << " ";
 		cout << endl;
 	}
-	
+
 	system("pause");
 	return 0;
 }
