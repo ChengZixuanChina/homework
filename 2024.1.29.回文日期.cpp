@@ -15,9 +15,9 @@ int main()
 {
     int day_start, day_end, now, sum = 0;
     cin >> day_start >> day_end;
-    for(int i = day_start; i <= day_end; i = next_day(i))
+    for (int i = day_start; i <= day_end; i = next_day(i))
     {
-        if(is_huiwen(i))
+        if (is_huiwen(i))
             sum++;
     }
     cout << sum << endl;
@@ -77,7 +77,8 @@ bool is_huiwen(int day_num)
     int i = 0, j = (s.size() - 1);
     while (i <= j)
     {
-        if(s[i] != s[j]) return false;
+        if (s[i] != s[j])
+            return false;
         i++;
         j--;
     }
